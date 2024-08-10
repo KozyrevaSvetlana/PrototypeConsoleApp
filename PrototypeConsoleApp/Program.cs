@@ -12,19 +12,19 @@ namespace PrototypeConsoleApp
             var dentalSurgeon = new DentalSurgeonWithPrototype(new Person("Петров", "Петр"), new DateTime(2020, 1, 1));
             var obstetricianGynecologist = new ObstetricianGynecologistWithPrototype(new Person("Сидоров", "Михаил"), new DateTime(2010, 1, 1));
 
-            var clonedDog = dentalSurgeon.Clone();
-            var clonedParrot = obstetricianGynecologist.Clone();
+            var clonedDental = dentalSurgeon.Clone();
+            var clonedGynecologist = obstetricianGynecologist.Clone();
 
-            Console.WriteLine($"Original DentalSurgeon: {dentalSurgeon.Person.LastName} {dentalSurgeon.Person.FirstName}");
-            Console.WriteLine($"Cloned DentalSurgeon: {clonedDog.Person.LastName} {clonedDog.Person.FirstName}");
+            Console.WriteLine($"Базовый Стоматолог-хирург: {dentalSurgeon.Person.LastName} {dentalSurgeon.Person.FirstName}");
+            Console.WriteLine($"Клон Стоматолога-хирурга: {clonedDental.Person.LastName} {clonedDental.Person.FirstName}");
 
-            Console.WriteLine($"Original ObstetricianGynecologist:{obstetricianGynecologist.Person.LastName} {obstetricianGynecologist.Person.FirstName}");
-            Console.WriteLine($"Cloned ObstetricianGynecologist:{clonedParrot.Person.LastName} {clonedParrot.Person.FirstName}");
+            Console.WriteLine($"Базовый Гениколог:{obstetricianGynecologist.Person.LastName} {obstetricianGynecologist.Person.FirstName}");
+            Console.WriteLine($"Клон Гениколога:{clonedGynecologist.Person.LastName} {clonedGynecologist.Person.FirstName}");
 
             dentalSurgeon.StartReception(patient);
             obstetricianGynecologist.StartReception(patient);
-            clonedDog.StartReception(patient);
-            clonedParrot.StartReception(patient);
+            clonedDental.StartReception(patient);
+            clonedGynecologist.StartReception(patient);
 
             Console.ReadKey();
         }
